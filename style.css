@@ -20,12 +20,30 @@ body {
     padding: 0;
 }
 
-.logo {
-    width: 350px;
-    height: auto;
-    margin: 20px;
+header {
+    height: 80px;
+    background-color: #0A222C;
+}
+
+.logo-image {
+    height: 40px;
+    padding: 16px 0px 0px 16px;
+}
+
+main {
+    background-color: #071820;
+}
+
+.main-header {
+    height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 h1 {
-    text-align: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #F9F8FD;
+    margin: 0 0 0 0;
 }
