@@ -55,6 +55,32 @@ h1 {
     margin: 0 0 0 0;
 }
 
+.photo-section {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 16px;
+    padding: 30px 100px;
+    justify-content: center;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.photo-container {
+    aspect-ratio: 1 / 1;
+    overflow: hidden;
+    border-radius: 12px;
+    border-color: rgba(2, 140, 220, 0.447);
+    border-width: 1px;
+    border-style: solid;
+}
+
+.photo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
 footer {
     display: flex;
     background-color: #0A222C;
@@ -73,6 +99,17 @@ footer {
     width: 100%;
     max-width: 1920px;
     margin: 0 auto;
+}
+
+.profile-pic-and-name {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 8px;
+}
+
+.name {
+    color: white;
 }
 
 .footer-logo {
@@ -97,7 +134,8 @@ footer {
 }
 
 .data-protection-imprint:hover {
-    color: green;
+    color: #071820;
+    filter: drop-shadow(0px 0px 2px white);
 }
 
 .footer-socials {
