@@ -83,6 +83,10 @@ h1 {
     border-style: solid;
 }
 
+.photo-container:hover {
+    border-color: rgba(2, 140, 220, 0.884);
+}
+
 .photo-image {
     width: 100%;
     height: 100%;
@@ -223,7 +227,7 @@ footer {
 
 .close-button:hover,
 .close-button:focus {
-    color: #ff5c5c;
+    color: rgba(2, 140, 220, 0.884);
     text-decoration: none;
 }
 
