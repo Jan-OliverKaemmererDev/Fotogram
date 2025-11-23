@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // 1. DOM-Elemente abrufen
     const photoContainers = document.querySelectorAll('.photo-container');
     const imageDialog = document.getElementById('image-dialog');
+    const dialogContent = document.querySelector('.dialog-content');
     const dialogImage = document.getElementById('dialog-image');
     const imageTitle = document.getElementById('image-title');
     const imageCounter = document.getElementById('image-counter');
@@ -18,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // Index des aktuell angezeigten Bildes
     let currentImageIndex = 0;
     const totalImages = allImageUrls.length;
+
+    dialogContent.classList.add('hidden');
 
     /**
      * Aktualisiert das Bild im Dialogfenster basierend auf dem aktuellen Index.
@@ -57,14 +60,27 @@ document.addEventListener('DOMContentLoaded', () => {
         imageDialog.style.alignItems = 'center'; 
         imageDialog.style.justifyContent = 'center';
         document.body.style.overflow = 'hidden'; // Scrollen des Hintergrunds verhindern
+        requestAnimationFrame(() => {
+            dialogContent.classList.remove('hidden');
+        })
     }
 
     /**
      * Schließt das Dialogfenster.
      */
     function closeDialog() {
-        imageDialog.style.display = 'none'; // Dialog ausblenden
-        document.body.style.overflow = 'auto'; // Scrollen des Hintergrunds wiederherstellen
+        // SCHRITT 1: Transition starten (optisch ausblenden)
+        dialogContent.classList.add('hidden');
+
+        // SCHRITT 2: Warten, bis die Transition beendet ist (0.3s, definiert im CSS)
+        dialogContent.addEventListener('transitionend', function handler() {
+            // Erst wenn die Animation fertig ist, 'display: none' setzen
+            imageDialog.style.display = 'none'; 
+            document.body.style.overflow = 'auto';
+            
+            // Wichtig: Event-Listener wieder entfernen, um Speicherlecks zu vermeiden
+            dialogContent.removeEventListener('transitionend', handler);
+        }, { once: true }); // 'once: true' stellt sicher, dass der Handler nur einmal ausgeführt wird
     }
 
     /**
