@@ -54,6 +54,8 @@ document.addEventListener('DOMContentLoaded', () => {
         currentImageIndex = index;
         updateDialogImage();
         imageDialog.style.display = 'flex'; // Dialog anzeigen
+        imageDialog.style.alignItems = 'center'; 
+        imageDialog.style.justifyContent = 'center';
         document.body.style.overflow = 'hidden'; // Scrollen des Hintergrunds verhindern
     }
 
