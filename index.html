@@ -96,6 +96,30 @@
                 </div>
             </div>
     </footer>
+
+    <div id="image-dialog" class="image-dialog">
+        <div class="dialog-content">
+            <div class="dialog-header">
+                <span id="image-title" class="image-title"></span>
+                <a id="original-size-link" href="#" target="_blank" class="original-size-link" title="Bild in Originalgröße öffnen">
+                    <img src="./img/plus.svg" alt="Originalgröße" class="plus-icon">
+                </a>
+                <span class="close-button">&times;</span>
+            </div>
+            <div class="dialog-image-container">
+                <img id="dialog-image" src="" alt="Großansicht" class="dialog-image">
+            </div>
+            <div class="dialog-footer">
+                <button id="prev-button" class="nav-button left-arrow">
+                    <img src="./img/left-arrow.svg" alt="Vorheriges Bild" class="arrow-icon">
+                </button>
+                <span id="image-counter"></span>
+                <button id="next-button" class="nav-button right-arrow">
+                    <img src="./img/right-arrow.svg" alt="Nächstes Bild" class="arrow-icon">
+                </button>
+            </div>
+        </div>
+    </div>
     
     <script src="script.js"></script>
 </body>
