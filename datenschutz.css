@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway/Raleway-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('./fonts/Raleway/Raleway-Italic-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    min-height: 80px;
+    background-color: #0c2834;
+    padding: 24px 50px 24px 50px;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    width: 100%;
+}
+
+.header-content {
+    max-width: 1920px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-image {
+    height: 40px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40px;
+    height: 40px;
+    z-index: 1001;
+}
+
+.bar {
+    width: 100%;
+    height: 4px;
+    background-color: #F9F8FD;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 0;
+    max-width: 300px;
+    background-color: #071820;
+    z-index: 1000;
+    overflow-x: hidden;
+    transition: width 0.3s ease-in-out;
+    padding-top: 80px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.side-menu.open {
+    width: 80%;
+}
+
+.side-menu nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu nav ul li a {
+    padding: 15px 50px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #F9F8FD;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.side-menu nav ul li a:hover {
+    background-color: rgba(2, 140, 220, 0.884);
+}
+
+a {
+    color: rgba(2, 140, 220, 0.884);
+}
+
+main {
+    background-color: #071820;
+    color: #F9F8FD;
+    font-size: 16px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 50px 50px 50px 50px;
+    flex: 1;
+}
+
+
+
+footer {
+    display: flex;
+    background-color: #0c2834;
+    align-items: center;
+    height: 150px;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    height: 47px;
+    width: 47px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.6s ease-in-out;
+}
+
+.footer-logo:hover {
+    transform: rotateY(360deg);
+}
+
+.data-protection-imprint {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    padding: 6px;
+}
+
+.data-protection-imprint:hover {
+    color: rgba(2, 140, 220, 0.884);
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 24px;
+}
+
+.social-img {
+    height: 47px;
+    transition: transform 0.6s ease-in-out;
+}
+
+.social-img:hover {
+    transform: rotateY(360deg);
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+    html,
+    body {
+        overflow-x: hidden;
+    }
+    main {
+        padding-top: 0;
+        padding-right: 16px;
+        padding-left: 16px;
+        padding-bottom: 50px;
+    }
+    .content {
+        height: 165px;
+    }
+    header {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    footer {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+    .footer-socials {
+        gap: 16px;
+    }
+    .data-protection-imprint {
+        font-size: 15px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        padding-left: 10px;
+    }
+    .social-img {
+        height: 40px;
+        width: 40px;
+    }
+    button {
+        height: 28px;
+        width: 80px;
+    }
+    h2 {
+        text-align: center;
+    }
+    h3 {
+        text-align: center;
+    }
+    p {
+        text-align: justify;
+    }
+    ul {
+        padding-left: 8px;
+    }
+    li {
+        text-align: justify;
+    }
+    main a {
+        overflow-wrap: break-word;
+        word-break: break-all;
+    }
+}
