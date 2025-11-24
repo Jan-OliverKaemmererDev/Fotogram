@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeButton = document.querySelector('.close-button');
     const prevButton = document.getElementById('prev-button');
     const nextButton = document.getElementById('next-button');
+    const menuToggle = document.getElementById('menu-toggle');
+    const sideMenu = document.getElementById('side-menu');
 
     const allImageUrls = Array.from(photoContainers).map(container => 
         container.querySelector('.photo-image').src
@@ -89,6 +91,21 @@ document.addEventListener('DOMContentLoaded', () => {
         if (event.target === imageDialog) {
             closeDialog();
         }
+    });
+
+    function toggleMenu() {
+        sideMenu.classList.toggle('open');
+        document.body.classList.toggle('overlay-active');
+    }
+
+    menuToggle.addEventListener('click', toggleMenu);
+
+    sideMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (sideMenu.classList.contains('open')) {
+                toggleMenu();
+            }
+        });
     });
 
     document.addEventListener('keydown', (event) => {

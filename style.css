@@ -43,10 +43,76 @@ header {
 .header-content {
     max-width: 1920px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo-image {
     height: 40px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40px;
+    height: 40px;
+    z-index: 1001; /* Über dem Menü, aber unter dem Dialog */
+}
+
+.bar {
+    width: 100%;
+    height: 4px;
+    background-color: #F9F8FD;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ------------------------------------ */
+/* NEU: Side Menu Styling (Slide-In) */
+/* ------------------------------------ */
+
+.side-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh; /* Volle Höhe des Viewports */
+    width: 0; /* Standardmäßig ausgeblendet */
+    max-width: 300px;
+    background-color: #071820; /* Dunklerer Hintergrund für Kontrast */
+    z-index: 1000;
+    overflow-x: hidden;
+    transition: width 0.3s ease-in-out; /* Transition für die Breite (Slide-Effekt) */
+    padding-top: 80px; /* Platz für den Header/die Kopfzeile lassen */
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.side-menu.open {
+    width: 80%; /* Sichtbare Breite, z.B. 80% des Bildschirms */
+}
+
+.side-menu nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.side-menu nav ul li a {
+    padding: 15px 50px;
+    text-decoration: none;
+    font-size: 1.2em;
+    color: #F9F8FD;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.side-menu nav ul li a:hover {
+    background-color: rgba(2, 140, 220, 0.884);
 }
 
 main {
@@ -240,8 +306,9 @@ footer {
 }
 
 .plus-icon {
-    width: 30px;
-    height: 30px;
+    margin-top: 4px;
+    width: 24px;
+    height: 24px;
     filter: invert(1);
     transition: transform 0.3s;
 }
