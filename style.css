@@ -62,7 +62,7 @@ header {
     justify-content: space-around;
     width: 40px;
     height: 40px;
-    z-index: 1001; /* Über dem Menü, aber unter dem Dialog */
+    z-index: 1001;
 }
 
 .bar {
@@ -73,27 +73,23 @@ header {
     transition: all 0.3s ease-in-out;
 }
 
-/* ------------------------------------ */
-/* NEU: Side Menu Styling (Slide-In) */
-/* ------------------------------------ */
-
 .side-menu {
     position: fixed;
     top: 0;
     right: 0;
-    height: 100vh; /* Volle Höhe des Viewports */
-    width: 0; /* Standardmäßig ausgeblendet */
+    height: 100vh;
+    width: 0;
     max-width: 300px;
-    background-color: #071820; /* Dunklerer Hintergrund für Kontrast */
+    background-color: #071820;
     z-index: 1000;
     overflow-x: hidden;
-    transition: width 0.3s ease-in-out; /* Transition für die Breite (Slide-Effekt) */
-    padding-top: 80px; /* Platz für den Header/die Kopfzeile lassen */
+    transition: width 0.3s ease-in-out;
+    padding-top: 80px;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
 }
 
 .side-menu.open {
-    width: 80%; /* Sichtbare Breite, z.B. 80% des Bildschirms */
+    width: 80%;
 }
 
 .side-menu nav ul {
