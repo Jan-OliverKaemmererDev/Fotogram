@@ -312,7 +312,8 @@ footer {
     padding: 0;
     display: flex;
     justify-content: center;
-    align-items: center
+    align-items: center;
+    filter: drop-shadow(8px 8px 8px #071820);
 }
 
 .dialog-image {
