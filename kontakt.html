@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="kontakt.css">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="./img/favicon.png" sizes="32x32">
+    <link rel="apple-touch-icon" sizes="180x180" href="./img/favicon.png">
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html"><img src="./img/Fotogram_Logo.svg" alt="Fotogram Logo" class="logo-image"></a>
+
+            <button id="menu-toggle" class="menu-toggle" aria-label="Menü öffnen">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </button>
+        </div>
+
+        <div id="side-menu" class="side-menu">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Alle Fotos</a></li>
+                    <li><a href="index.html">Alben</a></li>
+                    <li><a href="datenschutz.html">Datenschutz</a></li>
+                    <li><a href="impressum.html">Impressum</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li> 
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <form action="https://formspree.io/f/xblqjraz" method="POST">
+            <h3>Kontaktiere uns</h3>
+            <label class="label-contact">
+                Dein Name:
+                <input class="input-contact" type="text" maxlength="50" required="">
+            </label>
+            <label class="label-contact">
+                Deine E-Mail:
+                <input class="input-contact" type="email" name="email" maxlength="50" required="">
+            </label>
+            <label class="label-contact">
+                Betreff:
+                <input class="input-contact" type="text" name="_subject" maxlength="50" required="">
+            </label>
+            <label class="label-contact">
+                Deine Nachricht:
+                <textarea name="message" maxlength="400" rows="16" cols="70" required=""></textarea>
+            </label>
+            <button class="button-send" type="submit">Abschicken</button>
+        </form>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+                <a href="index.html">
+                    <img class="footer-logo" src="./img/favicon.png" alt="Footer-Logo">
+                </a>
+                <div class="data-protection-imprint">
+                    <a class="data-protection-imprint" href="datenschutz.html">Datenschutz</a>
+                    <a class="data-protection-imprint" href="impressum.html">Impressum</a>
+                </div>
+                <div class="footer-socials">
+                    <a href="https://de-de.facebook.com/" target="_blank">
+                        <img class="social-img" src="./img/facebook_logo.svg" alt="facebook-logo">
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank">
+                        <img class="social-img" src="./img/instagram_logo.svg" alt="instagram-logo">
+                    </a>
+                </div>
+            </div>
+    </footer>
+
+    <script src="toggle-menu.js"></script>
+</body>
+</html>
