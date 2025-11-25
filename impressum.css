@@ -122,6 +122,10 @@ main {
     padding: 50px 0;
 }
 
+a {
+    color: rgba(2, 140, 220, 0.884);
+}
+
 .imprint {
     max-width: 1920px;
     width: 100%;

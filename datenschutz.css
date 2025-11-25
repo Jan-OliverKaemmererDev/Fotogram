@@ -14,6 +14,11 @@
     font-display: swap;
 }
 
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -120,7 +125,8 @@ main {
     color: #F9F8FD;
     font-size: 16px;
     align-items: center;
-    margin: 0 auto;
+    margin: 0;
+    width: 100%;
     padding: 50px 50px 50px 50px;
     flex: 1;
 }
@@ -185,44 +191,16 @@ footer {
 }
 
 @media (min-width: 320px) and (max-width: 768px) {
-    html,
-    body {
-        overflow-x: hidden;
+    header, footer, main {
+        padding-left: 16px;
+        padding-right: 16px;
     }
     main {
         padding-top: 0;
-        padding-right: 16px;
-        padding-left: 16px;
         padding-bottom: 50px;
     }
-    .content {
-        height: 165px;
-    }
-    header {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-    footer {
-        padding-left: 16px;
-        padding-right: 16px;
-    }
-    .footer-socials {
-        gap: 16px;
-    }
-    .data-protection-imprint {
-        font-size: 15px;
-        flex-direction: column;
-        justify-content: center;
-        text-align: center;
-        padding-left: 10px;
-    }
-    .social-img {
-        height: 40px;
-        width: 40px;
-    }
-    button {
-        height: 28px;
-        width: 80px;
+    h1 {
+        font-size: 2.0em;
     }
     h2 {
         text-align: center;
@@ -239,8 +217,23 @@ footer {
     li {
         text-align: justify;
     }
-    main a {
+    main p, main a, main li, main h1, main h2, main h3 {
         overflow-wrap: break-word;
-        word-break: break-all;
+        word-wrap: break-word;
+        word-break: break-word;
+        hyphens: auto;
+    }
+    .data-protection-imprint {
+        flex-direction: column;
+        align-items: center;
+        font-size: 15px;
+        padding-left: 10px;
+    }
+    .footer-socials {
+        gap: 16px;
+    }
+    .footer-socials img {
+        height: 40px;
+        width: 40px;
     }
 }
