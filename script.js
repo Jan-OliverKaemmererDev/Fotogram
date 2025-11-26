@@ -83,6 +83,13 @@ document.addEventListener('DOMContentLoaded', () => {
         container.addEventListener('click', () => {
             openDialog(index);
         });
+
+        container.addEventListener('keydown', (event) => {
+            if (event.key === 'Enter' || event.key === ' ') {
+                event.preventDefault();
+                openDialog(index);
+            }
+        });
     });
 
     closeButton.addEventListener('click', closeDialog);
