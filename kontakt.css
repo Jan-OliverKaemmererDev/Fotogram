@@ -243,3 +243,36 @@ footer {
 .social-img:hover {
     transform: rotateY(360deg);
 }
+
+@media (min-width: 320px) and (max-width: 768px) {
+    header {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    main {
+        padding: 24px 8px 24px 8px;
+    }
+    form {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        margin-bottom: 32px;
+    }
+    footer {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    .data-protection-imprint {
+        flex-direction: column;
+        align-items: center;
+        font-size: 15px;
+        padding-left: 10px;
+    }
+    .footer-socials {
+        gap: 16px;
+    }
+    .footer-socials img {
+        height: 40px;
+        width: 40px;
+    }
+}
