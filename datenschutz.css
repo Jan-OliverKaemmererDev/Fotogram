@@ -1,3 +1,17 @@
+/* ----------------------------------------------------------- */
+/* 1. VARIABLES & FONTS                                       */
+/* ----------------------------------------------------------- */
+:root {
+    --primary-bg: #0c2834;
+    --secondary-bg: #071820;
+    --text-color: #F9F8FD;
+    --accent-color: rgba(2, 140, 220, 0.884);
+    --shadow-color: rgba(0, 0, 0, 0.5);
+    --border-color: rgba(2, 140, 220, 0.447);
+    --arrow-icon-shadow-color: rgba(55, 151, 207, 0.71);
+    --font-main: 'Raleway', sans-serif;
+}
+
 @font-face {
     font-family: 'Raleway';
     src: url('./fonts/Raleway/Raleway-VariableFont_wght.ttf') format('truetype');
@@ -14,6 +28,9 @@
     font-display: swap;
 }
 
+/* ----------------------------------------------------------- */
+/* 2. GLOBAL STYLES                                           */
+/* ----------------------------------------------------------- */
 html, body {
     max-width: 100%;
     overflow-x: hidden;
@@ -35,9 +52,16 @@ body {
     flex-direction: column;
 }
 
+a {
+    color: var(--accent-color);
+}
+
+/* ----------------------------------------------------------- */
+/* 3. HEADER & NAVIGATION                                     */
+/* ----------------------------------------------------------- */
 header {
     min-height: 80px;
-    background-color: #0c2834;
+    background-color: var(--primary-bg);
     padding: 24px 50px 24px 50px;
     position: sticky;
     top: 0;
@@ -73,7 +97,7 @@ header {
 .bar {
     width: 100%;
     height: 4px;
-    background-color: #F9F8FD;
+    background-color: var(--text-color);
     border-radius: 2px;
     transition: all 0.3s ease-in-out;
 }
@@ -85,12 +109,12 @@ header {
     height: 100vh;
     width: 0;
     max-width: 300px;
-    background-color: #071820;
+    background-color: var(--secondary-bg);
     z-index: 1000;
     overflow-x: hidden;
     transition: width 0.3s ease-in-out;
     padding-top: 80px;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: -5px 0 15px var(--shadow-color);
 }
 
 .side-menu.open {
@@ -107,22 +131,21 @@ header {
     padding: 15px 50px;
     text-decoration: none;
     font-size: 1.2em;
-    color: #F9F8FD;
+    color: var(--text-color);
     display: block;
     transition: background-color 0.3s;
 }
 
 .side-menu nav ul li a:hover {
-    background-color: rgba(2, 140, 220, 0.884);
+    background-color: var(--accent-color);
 }
 
-a {
-    color: rgba(2, 140, 220, 0.884);
-}
-
+/* ----------------------------------------------------------- */
+/* 4. MAIN CONTENT                                            */
+/* ----------------------------------------------------------- */
 main {
-    background-color: #071820;
-    color: #F9F8FD;
+    background-color: var(--secondary-bg);
+    color: var(--text-color);
     font-size: 16px;
     align-items: center;
     margin: 0;
@@ -131,9 +154,12 @@ main {
     flex: 1;
 }
 
+/* ----------------------------------------------------------- */
+/* 5. FOOTER                                                  */
+/* ----------------------------------------------------------- */
 footer {
     display: flex;
-    background-color: #0c2834;
+    background-color: var(--primary-bg);
     align-items: center;
     height: 150px;
     width: 100%;
@@ -166,13 +192,13 @@ footer {
 
 .data-protection-imprint {
     text-decoration: none;
-    color: white;
+    color: var(--text-color);
     display: flex;
     padding: 6px;
 }
 
 .data-protection-imprint:hover {
-    color: rgba(2, 140, 220, 0.884);
+    color: var(--accent-color);
 }
 
 .footer-socials {
@@ -190,6 +216,9 @@ footer {
     transform: rotateY(360deg);
 }
 
+/* ----------------------------------------------------------- */
+/* 6. MEDIA QUERIES                                           */
+/* ----------------------------------------------------------- */
 @media (min-width: 320px) and (max-width: 768px) {
     header, footer, main {
         padding-left: 16px;
