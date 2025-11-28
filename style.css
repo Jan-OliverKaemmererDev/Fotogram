@@ -164,12 +164,15 @@ h1 {
 }
 
 .photo-container {
+    display: block;
     aspect-ratio: 1 / 1;
     overflow: hidden;
     border-radius: 12px;
     border-color: var(--border-color);
     border-width: 1px;
     border-style: solid;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .photo-container:hover {
@@ -301,11 +304,14 @@ footer {
 
 .close-button {
     color: var(--text-color);
+    background-color: var(--primary-bg);
     font-size: 30px;
     font-weight: bold;
     cursor: pointer;
     transition: color 0.3s;
     margin-left: 20px;
+    text-decoration: none;
+    border: none;
 }
 
 .close-button:hover,

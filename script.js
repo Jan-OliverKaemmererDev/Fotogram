@@ -80,7 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     photoContainers.forEach((container, index) => {
-        container.addEventListener('click', () => {
+        container.addEventListener('click', (event) => {
+            event.preventDefault();
             openDialog(index);
         });
 
